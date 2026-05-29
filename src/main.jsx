@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, Outlet } from "react-router";
+import { createBrowserRouter, HashRouter, Outlet } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Home from "./path/HomePage.jsx";
 // import "./index.css"
@@ -99,5 +99,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />,
+  <HashRouter>
+    <RouterProvider router={router} />
+  </HashRouter>
 );
