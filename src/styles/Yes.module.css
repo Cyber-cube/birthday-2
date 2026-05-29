@@ -1,0 +1,104 @@
+html, body {
+  height: 100%;
+}
+
+.mainDiv {
+  position: fixed;
+  overflow: scroll;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  grid-gap: 40px;
+  background-color: #d8e0fe;
+}
+
+.circleContainer {
+  display: grid;
+  place-content: center;
+  /* background-color: white; */
+}
+
+.container {
+  position: relative;
+  display: grid;
+  place-content: center;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid 1px black;
+}
+
+.children {
+  position: relative;
+}
+
+.mainContainer {
+  display: grid;
+  place-content: center;
+  width: 80vw;
+  height: 20px;
+  border-radius: 20px;
+  /* background-color: black; */
+  position: relative;
+}
+
+.progressContainer {
+  /* border: solid 2px #7A1C1C; */
+  border: solid 2px #002eb8;
+  border-radius: inherit;
+  /* background-color: #F8E6CB; */
+  background-color: #688aed;
+  width: inherit;
+  height: inherit;
+  position: relative;
+}
+
+.progress {
+  /* background-color: #E2BF88; */
+  background-color: #455ca3;
+  /* background-color: black; */
+  /* width: 20%; */
+  height: inherit;
+  z-index: 100;
+  border-radius: inherit;
+  transition: width 0.5s ease;
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 0; */
+}
+
+.buttonContainer {
+  display: grid;
+  place-content: center;
+}
+
+.button {
+  background-color: #4169e1;
+  width: 30vw;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  height: 20px;
+}
+
+.button:disabled {
+  background-color: hsl(225, 73%, 70%);
+}
+.textContainer {
+  /* position: absolute;
+  left: 0;
+  top: 20px; */
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 1000;
+  width: 80vw;
+  /* transform: scale(2); */
+  /* color: #fa2590; */
+  color: #4169e1;
+}

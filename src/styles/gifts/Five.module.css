@@ -1,0 +1,56 @@
+html, body {
+  height: 100%;
+}
+
+.mainDiv {
+  /* background-color: #E6F8FF; */
+  background-color: #c4f2ff;
+  /* background-color: #f5b5ff; */
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  grid-gap: 60px;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 80vw;
+  color: #4169e1;
+  font-family: "Rammetto One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.key {
+  position: absolute;
+  max-width: 20vw;
+  height: auto;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -53%);
+}
+
+.gif {
+  transform: scale(0.5);
+}
+
+.forwardBtn {
+  background-color: #4169e1;
+  width: 30vw;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  height: 20px;
+}
+
+.forwardBtnContainer {
+  display: grid;
+  place-content: center;
+}

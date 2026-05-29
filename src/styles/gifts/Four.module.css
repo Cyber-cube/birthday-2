@@ -1,0 +1,107 @@
+html, body {
+  height: 100%;
+}
+
+.mainDiv {
+  background-color: #E6F8FF;
+  /* background-color: #c4f2ff; */
+  /* background-color: #f5b5ff; */
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  grid-gap: 30px;
+}
+
+.key {
+  position: absolute;
+  max-width: 20vw;
+  height: auto;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
+.textContainer {
+  width: 80vw;
+  /* color: #4169e1; */
+  /* color: #333333; */
+  color: #121824;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.forwardBtn {
+  background-color: #4169e1;
+  width: 30vw;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  height: 20px;
+}
+
+.forwardBtnContainer {
+  display: grid;
+  place-content: center;
+}
+
+.gameArea {
+  max-width: 80vw;
+  height: auto;
+}
+
+.heart {
+  max-width: 5vw;
+  height: auto;
+}
+
+.outcome {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 80vw;
+  /* color: #4169e1; */
+  font-family: "Rammetto One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.startBtn {
+  height: 5vh;
+  width: 20vw;
+  border: none;
+  border-radius: 20px;
+  background-color: #fa2590;
+  color: white;
+}
+
+.progressContainer {
+  width: 80vw;
+  border: solid 2px black;
+  height: 5vh;
+  position: relative;
+  border: solid 2px #002eb8;
+  border-radius: 20px;
+  overflow: hidden;
+  /* background-color: #688aed; */
+  background-color: #7ddaff;
+}
+
+.progress {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: inherit;
+  /* background-color: #455ca3; */
+  background-color: #29a5d6;
+  height: inherit;
+  z-index: 100;
+  border-radius: inherit;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}

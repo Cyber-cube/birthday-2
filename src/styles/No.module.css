@@ -1,0 +1,39 @@
+html, body {
+  height: 100%;
+}
+
+.mainDiv {
+  position: fixed;
+  overflow: scroll;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  grid-gap: 40px;
+  background-color: #d8e0fe;
+}
+
+.gifContainer {
+  width: 80vw;
+  display: grid;
+  place-content: center;
+}
+
+img {
+  width: 100%;
+}
+
+.buttonContainer {
+  display: grid;
+  place-content: center;
+}
+
+.button {
+  width: 8rem;
+  border: none;
+  color: white;
+  background-color: #4169e1;
+  border-radius: 20px;
+}

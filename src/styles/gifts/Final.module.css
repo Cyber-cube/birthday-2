@@ -1,0 +1,54 @@
+html, body {
+  height: 100%;
+}
+
+.mainDiv {
+  /* background-color: #E6F8FF; */
+  background-color: #c4f2ff;
+  /* background-color: #f5b5ff; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  grid-gap: 20px;
+}
+
+.key {
+  position: absolute;
+  max-width: 50px;
+  height: auto;
+  bottom: 20px;
+  right: 20px;
+  /* transform: scale(0.2); */
+}
+
+.gif {
+  transform: scale(0.5);
+}
+
+.forwardBtn {
+  background-color: #4169e1;
+  width: 40vw;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  height: 20px;
+}
+
+.forwardBtnContainer {
+  display: grid;
+  place-content: center;
+}
+
+.textContainer {
+  width: 80vw;
+  /* color: #4169e1; */
+  /* color: #333333; */
+  color: #121824;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}

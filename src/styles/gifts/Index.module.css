@@ -1,0 +1,104 @@
+html, body {
+  height: 100%;
+}
+
+.mainDiv {
+  /* background-color: #E6F8FF; */
+  background-color: #c4f2ff;
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  grid-gap: 20px;
+}
+
+.giftsContainer {
+  width: 80vw;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  place-items: center;
+}
+
+.final {
+  grid-area: 4 / 1 / span 4 / span 2;
+  display: flex;
+  justify-content: center;
+  /* grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 4; */
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  width: 25vw;
+  height: 25vw;
+  display: grid;
+  place-content: center;
+}
+
+.btnFinal {
+  background-color: #4169e1;
+  /* height: 25vw; */
+  display: grid;
+  place-content: center;
+  width: 30vw;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  height: 20px;
+}
+
+.btnFinal:disabled {
+  background-color: hsl(225, 73%, 70%);
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textDiv {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  font-size: 20px;
+  font-weight: 1000;
+  /* transform: scale(2); */
+  /* color: #fa2590; */
+  color: #4169e1;
+}
+
+.progressContainer {
+  width: 80vw;
+  border: solid 2px black;
+  height: 5vh;
+  position: relative;
+  border: solid 2px #002eb8;
+  border-radius: 20px;
+  /* background-color: #688aed; */
+  background-color: #7ddaff;
+}
+
+.progress {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: inherit;
+  /* background-color: #455ca3; */
+  background-color: #29a5d6;
+  height: inherit;
+  z-index: 100;
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+

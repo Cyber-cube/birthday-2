@@ -1,0 +1,127 @@
+html, body {
+  height: 100%;
+}
+
+.mainBox {
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  grid-gap: 20px;
+  background: #f5b5ff;
+  background: radial-gradient(circle, rgba(245, 181, 255, 1) 0%, rgba(255, 217, 248, 1) 100%);
+}
+
+/* #canvas {
+  z-index: 10;
+  pointer-events: none;
+} */
+
+.statusBar {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+}
+
+.buttonContainer {
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.button {
+  width: 8rem;
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  border-radius: 20px;
+}
+
+.canvasContainer {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  pointer-events: none;
+}
+
+.textContainer {
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  /* left: 0px; */
+  display: grid;
+  color: #ff69b4;
+  place-content: center;
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.canvas {
+  z-index: 10;
+  pointer-events: none;
+  /* background-color: black; */
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, 30px);
+  grid-template-rows: repeat(3, 30px);
+  width: calc(3*30px);
+  height: calc(3*30px);
+  /* padding: 5px */
+}
+
+.tictactoeContainer {
+  display: grid;
+  place-content: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 50, 0.15);
+  font-family: sans-serif;
+  font-weight: 400;
+  /* height: 100px; */
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  font-weight: normal;
+  display: grid;
+  place-content: center;
+}
+
+.tictactoe {
+  height: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.box:nth-child(2 of .box), .box:nth-child(8 of .box) {
+  border-right: solid 2px black;
+  border-left: solid 2px black;
+}
+
+.box:nth-child(4 of .box), .box:nth-child(6 of .box) {
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+
+.box:nth-child(5 of .box) {
+  border: solid 2px black;
+}
+
+.redirectButton:disabled {
+  background-color: hsl(330, 100%, 80%);
+}
