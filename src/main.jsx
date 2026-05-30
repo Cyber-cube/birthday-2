@@ -99,7 +99,7 @@ const router = createHashRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <HashRouter basename="/birthday-2">
+  <HashRouter>
     <RouterProvider router={router} />
   </HashRouter>
 );
