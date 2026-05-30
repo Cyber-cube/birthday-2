@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, HashRouter, Outlet } from "react-router";
+import { createHashRouter, HashRouter, Outlet } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Home from "./path/HomePage.jsx";
 // import "./index.css"
@@ -19,7 +19,7 @@ import Final from "./path/gifts/final.jsx";
 import GiftsOutlet from "./path/gifts/giftOutlet.jsx";
 import "./styles/main.css"
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Outlet />,
@@ -99,7 +99,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <HashRouter>
+  <HashRouter basename="/birthday-2">
     <RouterProvider router={router} />
   </HashRouter>
 );
