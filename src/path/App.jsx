@@ -26,16 +26,21 @@ function App() {
   const [buttonDisabled, setButtonDisabled] = useState(true)
   const [triggerRefresh, setTriggerRefresh] = useState(0)
 
-  const assets = import.meta.glob("../assets/*.{png,jpg,svg,gif}", { eager: true })
+  const assets = import.meta.glob("../assets/*.{png,jpg,svg,gif}", { eager: true, import: "default" })
+  const images = Object.values(assets)
   useEffect(() => {
-    for (const img in assets) {
+    /* for (const img in assets) {
       assets[img]().then((mod) => {
         const img = new Image()
         img.src = mod.default
       })
     }
-    console.log(assets)
-  }, [assets])
+    console.log(assets) */
+    images.forEach((path) => {
+      const img = new Image()
+      img.src = path
+    })
+  }, [assets, images])
 
   function drawLine(r1, c1, r2, c2) {
     const ctx = canvas.current.getContext("2d")
