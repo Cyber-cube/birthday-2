@@ -26,7 +26,7 @@ function App() {
   const [buttonDisabled, setButtonDisabled] = useState(true)
   const [triggerRefresh, setTriggerRefresh] = useState(0)
 
-  const assets = import.meta.glob("../assets/*.{png,jpg,svg,gif}")
+  const assets = import.meta.glob("../assets/*.{png,jpg,svg,gif}", { eager: true })
   useEffect(() => {
     for (const img in assets) {
       assets[img]().then((mod) => {
