@@ -9,6 +9,7 @@ function RotatingComponent({ degree, updaterFunc }) {
     height: `${width}px`,
     width: `${width}px`,
     borderRadius: "50%",
+    zIndex: 999
     // backgroundColor: "black"
   }} onClick={(event) => {
     event.currentTarget.style.display = "none"
