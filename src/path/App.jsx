@@ -3,6 +3,15 @@ import { useEffect, useRef, useState } from "react";
 import useGame from "../useGame.jsx";
 import Styles from "../styles/HomePage.module.css"
 import { useNavigate } from "react-router";
+/* import one from "../assets/CakeBlown.png"
+import two from "../assets/CakeNotBlown.png"
+import three from "../assets/ForYou.gif"
+import four from "../assets/KeyYellow.svg"
+import five from "../assets/choicePage.gif"
+import six from "../assets/gift.png"
+import seven from "../assets/happy-birthday.gif"
+import eight from "../assets/heart.svg"
+import nine from "../assets/noPage.gif" */
 
 function App() {
   const { checkGame, grid, setGrid } = useGame()
@@ -16,6 +25,17 @@ function App() {
   const navigate = useNavigate()
   const [buttonDisabled, setButtonDisabled] = useState(true)
   const [triggerRefresh, setTriggerRefresh] = useState(0)
+
+  const assets = import.meta.glob("../assets/*.{png,jpg,svg,gif}")
+  useEffect(() => {
+    for (const img in assets) {
+      assets[img]().then((mod) => {
+        const img = new Image()
+        img.src = mod.default
+      })
+    }
+    console.log(assets)
+  }, [assets])
 
   function drawLine(r1, c1, r2, c2) {
     const ctx = canvas.current.getContext("2d")
