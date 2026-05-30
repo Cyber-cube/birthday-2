@@ -57,7 +57,9 @@ function Four() {
   }, [count, stopInterval, timeLeft])
 
   return <div className={Styles.mainDiv}>
-    <div className={Styles.progressContainer}>
+    <div className={Styles.progressContainer} style={{
+      display: `${gameStarted ? "grid" : "none"}`
+    }}>
       <div className={Styles.progress} style={{
         width: `${count/30 * 100}%`
       }}></div>
